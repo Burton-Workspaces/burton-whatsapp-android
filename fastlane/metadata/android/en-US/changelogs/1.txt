@@ -1,0 +1,3 @@
+• Initial F-Droid release
+• Direct chats and group messaging
+• Create, join, and leave groups

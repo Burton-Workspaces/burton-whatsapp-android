@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+        with:
+          packages: "platform-tools platforms;android-35"
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Create local.properties
+        run: echo "sdk.dir=${ANDROID_HOME}" > local.properties
+
+      - name: Compile debug (github)
+        run: ./gradlew :app:compileGithubDebugKotlin --no-daemon
+
+      - name: Compile release (github)
+        run: ./gradlew :app:compileGithubReleaseKotlin --no-daemon
+
+      - name: Compile debug (fdroid)
+        run: ./gradlew :app:compileFdroidDebugKotlin --no-daemon
+
+      - name: Unit tests
+        run: ./gradlew :core:common:test :core:domain:test --no-daemon

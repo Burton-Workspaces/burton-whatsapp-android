@@ -1,0 +1,4 @@
+# Copy to local.properties and adjust paths. Never commit local.properties.
+
+# Android SDK (Android Studio usually writes this automatically)
+sdk.dir=/path/to/Android/sdk

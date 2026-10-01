@@ -1,0 +1,27 @@
+Categories:
+  - Internet
+  - Messaging
+License: Apache-2.0
+AuthorName: Ryco
+SourceCode: https://github.com/rconnelly/burton-whatsapp-android
+IssueTracker: https://github.com/rconnelly/burton-whatsapp-android/issues
+
+AutoName: Burton
+
+RepoType: git
+Repo: https://github.com/rconnelly/burton-whatsapp-android.git
+
+Builds:
+  - versionName: 0.1.0
+    versionCode: 1000
+    commit: v0.1.0-fdroid
+    gradle:
+      - fdroid
+    rm:
+      - .github
+    prebuild: rm -f keystore.properties local.properties
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v[0-9.]+-fdroid$
+CurrentVersion: 0.1.0
+CurrentVersionCode: 1000

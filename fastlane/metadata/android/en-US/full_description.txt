@@ -1,0 +1,9 @@
+Burton is a local-first messenger for one-to-one chats and groups.
+
+• Chat list with last message, timestamps, and unread counts
+• Direct messages from your contacts
+• Create, join, and leave groups
+• Discover groups you are not in yet
+• No account, no cloud, no ads
+
+All messages stay on the device. This is a WhatsApp-style client, not an unofficial WhatsApp protocol client.
