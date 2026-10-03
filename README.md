@@ -49,6 +49,10 @@ Open the project in Android Studio or:
 
 Install the debug APK on a device or emulator running Android 8.0 (API 26) or higher. Seeded conversations and groups appear on first launch.
 
+## File an issue
+
+Shake the phone. Burton Issues opens on New issue with Burton Chat already selected. Nothing is posted until you submit; Back cancels.
+
 ## Distribution
 
 Two product flavors share the same source:
