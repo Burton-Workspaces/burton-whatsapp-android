@@ -9,7 +9,7 @@ Display name: **Burton**
 ./scripts/setup-fdroid-and-secrets.sh
 ```
 
-That reuses `~/fdroid` and `../burton-sonos-fdroid`, copies a sibling Burton JKS when
+That reuses `~/fdroid` and `../rabun-app-dist`, copies a sibling Burton JKS when
 present, then writes GitHub Actions secrets:
 
 | Secret | Value |

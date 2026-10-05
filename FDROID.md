@@ -9,7 +9,7 @@ signs. It is not submission to [f-droid.org](https://f-droid.org/), which rebuil
 source and signs with F-Droid’s key.
 
 Burton Android apps share one Pages catalog:
-[Burton-Workspaces/burton-sonos-fdroid](https://github.com/Burton-Workspaces/burton-sonos-fdroid).
+[Burton-Workspaces/burton-app-dist](https://github.com/Burton-Workspaces/burton-app-dist).
 
 ## One-time setup
 
@@ -47,7 +47,7 @@ Never publish `config.yml` or the repo keystore.
 
 Add the catalog in Droidify:
 
-`https://burton-workspaces.github.io/burton-sonos-fdroid/fdroid/repo`
+`https://burton-workspaces.github.io/burton-app-dist/fdroid/repo`
 
 Flavor `fdroid` (`assembleFdroidRelease`) is still available for an f-droid.org rebuild.
 The Pages catalog publishes the same signed GitHub APK as the other Burton apps.
